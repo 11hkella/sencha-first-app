@@ -21,6 +21,9 @@ Ext.define('FormPrac.view.main.Main', {
 
     items: [{
         xtype: 'form-multicolumn'
+    },
+    {
+        xtype: 'array-grid'
     }]
 
 
