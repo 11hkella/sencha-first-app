@@ -19,9 +19,6 @@ Ext.define('FormPrac.view.main.Form', {
         xtype: 'container',
         defaultType: 'textfield',
         style: 'width: 50%',
-        // listeners: {
-        //     change: 'onFormChange'
-        // }
     },
 
     items: [{
@@ -35,7 +32,12 @@ Ext.define('FormPrac.view.main.Form', {
         ]
     }, {
         items: [
-            { fieldLabel: 'Player 2' }
+            {
+                fieldLabel: 'Player 2',
+                listeners: {
+                    change: 'onFormChange'
+                }
+            }
         ]
     }],
 
