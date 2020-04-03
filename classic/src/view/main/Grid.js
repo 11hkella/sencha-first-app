@@ -10,8 +10,8 @@ Ext.define('FormPrac.view.main.BasicGrid', {
         'Ext.grid.column.Action'
     ],
 
-    title: 'Basic Grid',
-    width: 750,
+    title: 'Score Board',
+    width: 950,
     height: 350,
 
     // store: 'Companies',
@@ -25,29 +25,14 @@ Ext.define('FormPrac.view.main.BasicGrid', {
     },
 
     columns: [{
-        text: 'Company',
+        text: 'Player',
         flex: 1,
+        width: 150,
         dataIndex: 'name'
     }, {
-        text: 'Price',
-        width: 95,
-        formatter: 'usMoney',
-        dataIndex: 'price'
-    }, {
-        text: 'Change',
-        width: 80,
-        renderer: 'renderChange',
-        dataIndex: 'priceChange'
-    }, {
-        text: '% Change',
-        width: 100,
-        renderer: 'renderPercent',
-        dataIndex: 'priceChangePct'
-    }, {
-        text: 'Last Updated',
-        width: 115,
-        formatter: 'date("m/d/Y")',
-        dataIndex: 'priceLastChange'
+        text: 'Message',
+        width: 600,
+        dataIndex: 'message'
     }, {
         xtype: 'actioncolumn',
         width: 50,
