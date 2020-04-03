@@ -4,11 +4,11 @@ Ext.define('FormPrac.view.main.Form', {
     extend: 'Ext.form.Panel',
     xtype: 'form-multicolumn',
 
-    title: 'Multi Column Form',
-    frame: true,
-    resizable: true,
-    width: 610,
-    minWidth: 610,
+    title: 'The Wheel of Fate is Turning!',
+    frame: false,
+    // resizable: true,
+    width: 810,
+    minWidth: 810,
     minHeight: 300,
     bodyPadding: 0,
     layout: 'column',
@@ -22,22 +22,20 @@ Ext.define('FormPrac.view.main.Form', {
 
     items: [{
         items: [
-            { fieldLabel: 'First Name' },
-            { fieldLabel: 'Last Name' },
-            { fieldLabel: 'Phone Number' },
-            { fieldLabel: 'Email Address' }
+            { fieldLabel: 'Player 1' },
+            { fieldLabel: 'Player 1' },
+            { fieldLabel: 'Player 1' }
         ]
     }, {
         items: [
-            { fieldLabel: 'Street Address 1' },
-            { fieldLabel: 'Street Address 2' },
-            { fieldLabel: 'City, State' },
-            { fieldLabel: 'ZIP code' }
+            { fieldLabel: 'Player 2' },
+            { fieldLabel: 'Player 2' },
+            { fieldLabel: 'Player 2' }
         ]
     }],
 
     buttons: [
-        { text: 'OK' },
-        { text: 'Cancel' }
+        { text: 'Player 1' },
+        { text: 'Player 2' }
     ]
 });
