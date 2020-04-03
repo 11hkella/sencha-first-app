@@ -2,7 +2,8 @@
 
 Ext.define('FormPrac.view.main.Form', {
     extend: 'Ext.form.Panel',
-    xtype: 'form-multicolumn',
+    xtype: 'widget.form-multicolumn',
+    controller: 'form',
 
     title: 'The Wheel of Fate is Turning!',
     frame: false,
@@ -17,19 +18,23 @@ Ext.define('FormPrac.view.main.Form', {
         layout: 'form',
         xtype: 'container',
         defaultType: 'textfield',
-        style: 'width: 50%'
+        style: 'width: 50%',
+        // listeners: {
+        //     change: 'onFormChange'
+        // }
     },
 
     items: [{
         items: [
-            { fieldLabel: 'Player 1' },
-            { fieldLabel: 'Player 1' },
-            { fieldLabel: 'Player 1' }
+            {
+                fieldLabel: 'Player 1',
+                listeners: {
+                    change: 'onFormChange'
+                }
+            }
         ]
     }, {
         items: [
-            { fieldLabel: 'Player 2' },
-            { fieldLabel: 'Player 2' },
             { fieldLabel: 'Player 2' }
         ]
     }],
