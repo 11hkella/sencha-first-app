@@ -7,7 +7,6 @@ Ext.define('FormPrac.view.main.Form', {
 
     title: 'The Wheel of Fate is Turning!',
     frame: false,
-    // resizable: true,
     width: 810,
     minWidth: 810,
     minHeight: 300,
