@@ -22,16 +22,16 @@ Ext.define('FormPrac.view.main.FormController', {
     handleValueSubmit: function (e) {
         //find out which button was pressed
         //save that value to local storage
-        console.log(e)
-        const submitPlayer = e.config.text
-        console.log(submitPlayer)
+        const submitPlayer = e.config.itemId
 
-        const playerRefs = {
+        const playerFormRefs = {
             player1: Ext.ComponentQuery.query('#player1-form'),
             player2: Ext.ComponentQuery.query('#player2-form')
         }
+        const playerValue = playerFormRefs[submitPlayer][0].value
 
-        localStorage.setItem(submitPlayer)
+        console.log(submitPlayer, ' : ', playerValue)
+        localStorage.setItem(submitPlayer, playerValue)
 
 
     }
