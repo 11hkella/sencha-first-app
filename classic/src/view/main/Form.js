@@ -52,7 +52,7 @@ Ext.define('FormPrac.view.main.Form', {
         {
             text: 'Player 2',
             itemId: 'player2',
-            listeners: { click: 'handleSuhandleValueSubmitbmit' }
+            listeners: { click: 'handleValueSubmit' }
         }
     ]
 });
