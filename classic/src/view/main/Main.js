@@ -14,6 +14,7 @@ Ext.define('FormPrac.view.main.Main', {
 
     fullscreen: true,
     height: '100%',
+    scrollable: true,
     layout: {
         type: 'vbox',
         align: 'middle'

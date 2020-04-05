@@ -2,13 +2,13 @@
 
 Ext.define('FormPrac.view.main.Form', {
     extend: 'Ext.form.Panel',
-    xtype: 'form-multicolumn',
+    xtype: 'widget.form-multicolumn',
+    controller: 'form',
 
-    title: 'Multi Column Form',
-    frame: true,
-    resizable: true,
-    width: 610,
-    minWidth: 610,
+    title: 'The Wheel of Fate is Turning!',
+    frame: false,
+    width: 810,
+    minWidth: 810,
     minHeight: 300,
     bodyPadding: 0,
     layout: 'column',
@@ -17,27 +17,41 @@ Ext.define('FormPrac.view.main.Form', {
         layout: 'form',
         xtype: 'container',
         defaultType: 'textfield',
-        style: 'width: 50%'
+        style: 'width: 50%',
     },
 
     items: [{
         items: [
-            { fieldLabel: 'First Name' },
-            { fieldLabel: 'Last Name' },
-            { fieldLabel: 'Phone Number' },
-            { fieldLabel: 'Email Address' }
+            {
+                fieldLabel: 'Player 1',
+                itemId: 'player1-form',
+                listeners: {
+                    change: 'onFormChange'
+                }
+            }
         ]
     }, {
         items: [
-            { fieldLabel: 'Street Address 1' },
-            { fieldLabel: 'Street Address 2' },
-            { fieldLabel: 'City, State' },
-            { fieldLabel: 'ZIP code' }
+            {
+                fieldLabel: 'Player 2',
+                itemId: 'player2-form',
+                listeners: {
+                    change: 'onFormChange'
+                }
+            }
         ]
     }],
 
     buttons: [
-        { text: 'OK' },
-        { text: 'Cancel' }
+        {
+            text: 'Player 1',
+            itemId: 'player1',
+            listeners: { click: 'handleValueSubmit' }
+        },
+        {
+            text: 'Player 2',
+            itemId: 'player2',
+            listeners: { click: 'handleValueSubmit' }
+        }
     ]
 });
