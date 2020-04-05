@@ -25,6 +25,7 @@ Ext.define('FormPrac.view.main.Form', {
         items: [
             {
                 fieldLabel: 'Player 1',
+                itemId: 'player1-form',
                 listeners: {
                     change: 'onFormChange'
                 }
@@ -34,6 +35,7 @@ Ext.define('FormPrac.view.main.Form', {
         items: [
             {
                 fieldLabel: 'Player 2',
+                itemId: 'player2-form',
                 listeners: {
                     change: 'onFormChange'
                 }
@@ -42,7 +44,15 @@ Ext.define('FormPrac.view.main.Form', {
     }],
 
     buttons: [
-        { text: 'Player 1' },
-        { text: 'Player 2' }
+        {
+            text: 'Player 1',
+            itemId: 'player1',
+            listeners: { click: 'handleValueSubmit' }
+        },
+        {
+            text: 'Player 2',
+            itemId: 'player2',
+            listeners: { click: 'handleSuhandleValueSubmitbmit' }
+        }
     ]
 });
